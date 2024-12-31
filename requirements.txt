@@ -1,13 +1,4 @@
-numpy==1.24.2
-scikit-learn
-scipy==1.13.1
-matplotlib
+Flask==2.2.3
+numpy==1.19.5
+scikit-learn==0.24.2
 
-Flask==1.1.4
-Werkzeug==1.0.1
-MarkupSafe==2.0.1
-Jinja2==2.11.3
-itsdangerous==1.1.0
-click==7.1.2
-
-joblib==1.4.2
