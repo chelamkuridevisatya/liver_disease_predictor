@@ -44,4 +44,4 @@ jobs:
     - name: Check if the container is running
       run: docker ps
     - name: Display Docker container logs
-      run: docker logs $(docker ps -q -f "name=chelamkurids139/liver_disease_predictor")
+      run: docker logs 142ecba49906
