@@ -43,5 +43,9 @@ jobs:
       # Verify if the container is running
     - name: Check if the container is running
       run: docker ps
+    - name: Extract container ID
+      id: extract_id
+      run: echo "CONTAINER_ID=$(docker ps -q -f "name=chelamkurids139/liver_disease_predictor")" >> $GITHUB_ENV
+    
     - name: Display Docker container logs
-      run: docker logs 142ecba49906
+      run: docker logs $CONTAINER_ID
