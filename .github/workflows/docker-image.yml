@@ -46,6 +46,7 @@ jobs:
     - name: Extract container ID
       id: extract_id
       run: echo "CONTAINER_ID=$(docker ps -q -f "name=chelamkurids139/liver_disease_predictor")" >> $GITHUB_ENV
+           echo "Container ID is:$CONTAINER_ID" 
     
     - name: Display Docker container logs
       run: docker logs $CONTAINER_ID
