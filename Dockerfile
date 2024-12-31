@@ -1,5 +1,4 @@
-# Use the official Python image as the base
-FROM python:3.9-slim
+FROM python:3.6.13-slim
 
 # Set the working directory
 WORKDIR /app
@@ -7,9 +6,7 @@ WORKDIR /app
 # Copy all application files
 COPY . .
 
-# Install Cython first
-RUN pip install --no-cache-dir Cython
-RUN pip install --no-cache-dir numpy==1.24.2
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 
