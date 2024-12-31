@@ -7,7 +7,9 @@ WORKDIR /app
 # Copy all application files
 COPY . .
 
-RUN pip install --no-cache-dir numpy==1.24.2
+# Install Cython first
+RUN pip install --no-cache-dir Cython
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 
