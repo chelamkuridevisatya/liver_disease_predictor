@@ -9,7 +9,7 @@ COPY . .
 
 # Install Cython first
 RUN pip install --no-cache-dir Cython
-
+RUN pip install --no-cache-dir numpy==1.24.2
 RUN pip install --no-cache-dir -r requirements.txt
 
 
