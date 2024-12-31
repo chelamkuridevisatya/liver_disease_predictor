@@ -7,8 +7,9 @@ WORKDIR /app
 # Copy all application files
 COPY . .
 
-# Install dependencies
+RUN pip install --no-cache-dir numpy==1.24.2
 RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Expose the port your Flask app runs on
 EXPOSE 5000
