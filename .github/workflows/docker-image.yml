@@ -34,3 +34,12 @@ jobs:
       run: docker build . --file Dockerfile --tag chelamkurids139/liver_disease_predictor
     - name: Push the Docker image
       run: docker push chelamkurids139/liver_disease_predictor
+    - name: Run Docker container
+      run: docker run -d -p 5000:5000 chelamkurids139/liver_disease_predictor
+          # Wait for the application to be ready, optional but can be added
+           
+           # sleep 30
+          
+      # Verify if the container is running
+    - name: Check if the container is running
+      run: docker ps
